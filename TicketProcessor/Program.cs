@@ -8,7 +8,7 @@ Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
         services.AddDbContext<TicketContext>(options =>
-            options.UseSqlite(hostContext.Configuration.GetConnectionString("DefaultConnection"))); // Ensure this path is correct
+            options.UseSqlite(hostContext.Configuration.GetConnectionString("DefaultConnection")));
         services.AddHostedService<TicketProcessorService>();
         services.AddTransient<EmailSender>();
     })

@@ -7,9 +7,9 @@ namespace TicketProcessor
     {
         public void SendEmail(Ticket ticket)
         {
-            var fromAddress = new MailAddress("bm.muthu76@gmail.com", "Muthu");
-            var toAddress = new MailAddress("bs.mari100@gmail.com", "Admin");
-            var fromPassword = "9080805773@My";
+            var fromAddress = new MailAddress("sendermail@gmail.com", "Muthu");
+            var toAddress = new MailAddress("receivermail@gmail.com", "Admin");
+            var fromPassword = "SamplePassword";
             const string subject = "High Priority Ticket Alert";
             string body = $"Ticket ID: {ticket.Id}\nUser: {ticket.UserId}\nPriority: {ticket.Priority}\nModule: {ticket.Module}\nTitle: {ticket.Title}\nOrder ID: {ticket.OrderId}\nDescription: {ticket.Description}";
 
@@ -17,7 +17,7 @@ namespace TicketProcessor
             {
                 Host = "smtp.gmail.com",
                 Port = 587,
-                EnableSsl = true,  // Enable SSL
+                EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
