@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "42e/bszUNgsHFAGU8YrwZAjRtHh6EQ9oYEYGQ6VaogM=",
+  "Source": "TicketNotificationAPI",
+  "BasePath": "_content/TicketNotificationAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
